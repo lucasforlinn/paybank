@@ -34,13 +34,10 @@ test('Sucessful login', async ({ page }) => {
   await loginPage.fillCPF(user.cpf);
   await loginPage.fillPassword(user.password);
 
-  //temp
-  await page.waitForTimeout(3000);
+  await page.getByRole('heading', {name: 'Verificação em duas etapas'}).waitFor({timeout: 3000});
   const code = await get2FCode();
 
   await loginPage.fill2FCode(code);
   
-  //temp
-  await page.waitForTimeout(3000);
-  expect(await dashPage.getBalance()).toHaveText('R$ 5.000,00');
-});
+  await expect(await dashPage.getBalance()).toHaveText('R$ 5.000,00');
+}); 
