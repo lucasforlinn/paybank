@@ -35,7 +35,7 @@ test('Sucessful login', async ({ page }) => {
   await loginPage.fillPassword(user.password);
 
   await page.getByRole('heading', {name: 'Verificação em duas etapas'}).waitFor({timeout: 3000});
-  const code = await get2FCode();
+  const code = await get2FCode(user.cpf);
 
   await loginPage.fill2FCode(code);
   
