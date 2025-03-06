@@ -14,6 +14,7 @@ pipeline {
         stage('E2e Tests') {
             steps {
                 sh 'npx playwright test'
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
             }
         }
     }
