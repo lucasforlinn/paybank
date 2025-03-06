@@ -1,6 +1,15 @@
-# QA Tech Week - Primeira Edição
+# Paybank
 
-Bem-vindo ao repositório do **QA Tech Week - Primeira Edição**! Aqui você encontrará as instruções para configurar o ambiente, subir os serviços necessários e rodar os testes automatizados com Playwright.
+Bem-vindo ao repositório do **Paybank**! Aqui você encontrará as instruções para configurar o ambiente, subir os serviços necessários e rodar os testes automatizados com Playwright.
+Um projeto simples criado para automatizar o login dentro de um sistema bancário que recebe um código de verificação via email.
+
+Tecnologias utilizadas:
+
+- Playwright
+- Redis
+- Docker
+- Jenkins
+
 
 ## 📌 Pré-requisitos
 Antes de começar, certifique-se de ter os seguintes softwares instalados em seu sistema:
